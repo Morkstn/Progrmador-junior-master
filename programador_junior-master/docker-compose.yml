@@ -1,0 +1,24 @@
+version: '3.1'
+
+services:
+        
+  db:
+    container_name: teste
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes: 
+    - ./docker/mysql:/docker-entrypoint-initdb.d
+    - ./docker/data:/var/lib/mysql
+    environment:
+    MYSQL_ROOT_PASSWORD: 123456
+    MYSQL_DATABASE: data
+    ports:
+    - 3306:3306
+
+  adminer:
+    container_name: adminer-container
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

@@ -1,0 +1,44 @@
+CREATE DATABASE RAMAIS;
+ 
+USE RAMAIS;
+
+CREATE TABLE IF NOT EXISTS ramificacoes(
+	ramal VARCHAR(150) NOT NULL UNIQUE,
+    code VARCHAR(150) NOT NULL,
+    status VARCHAR(150) DEFAULT 'Indisponivel',
+    agente VARCHAR(150) NOT NULL,
+    historico INT DEFAULT 0,
+    PRIMARY KEY(ramal)
+);
+
+show tables;
+
+INSERT INTO ramificacoes VALUES(7092,7124, 'Chamando', 'Sam', 23);
+INSERT INTO ramificacoes VALUES(7054,7815, 'Indisponivel', 'Bob', 58);
+INSERT INTO ramificacoes VALUES(7252, 7505, 'Ocupado', 'Dean', 29);
+INSERT INTO ramificacoes VALUES(7124,7241, 'Chamando', 'Castiel', 38);
+INSERT INTO ramificacoes VALUES(7519,7081, 'Disponivel', 'Crowley', 58);
+INSERT INTO ramificacoes VALUES(7251, 7648, 'Disponivel', 'Ruby', 22);
+INSERT INTO ramificacoes VALUES(7071,7134, 'Disponivel', 'Lucifer', 52);
+INSERT INTO ramificacoes VALUES(7095,7458, 'Indisponivel', 'John', 54);
+INSERT INTO ramificacoes VALUES(7752, 7783, 'Chamando', 'Rowena', 60);
+INSERT INTO ramificacoes VALUES(7010,7644, 'Chamando', 'Mary', 50);
+INSERT INTO ramificacoes VALUES(7601,7975, 'Indisponivel', 'Jack', 18);
+INSERT INTO ramificacoes VALUES(7112, 7415, 'Disponivel', 'Jessica', 29);
+INSERT INTO ramificacoes VALUES(7718,7748, 'Chamando', 'Jody', 60);
+INSERT INTO ramificacoes VALUES(7455,7781, 'Indisponivel', 'Harvey', 45);
+INSERT INTO ramificacoes VALUES(7231, 7435, 'Ocupado', 'Mike', 29);
+INSERT INTO ramificacoes VALUES(7043,7141, 'Chamando', 'Dona', 40);
+INSERT INTO ramificacoes VALUES(7099,7884, 'Indisponivel', 'Louis', 45);
+INSERT INTO ramificacoes VALUES(7103, 7581, 'Disponivel', 'Dana', 40);
+
+
+show tables;
+
+
+select * from ramificacoes;
+
+
+   
+
+  
